@@ -3,6 +3,9 @@ import { departments, constitution, workflow, costBreakdown, responsibilityMatri
 import PaperTrading from './components/PaperTrading';
 import CodeSamples from './components/CodeSamples';
 import DatabaseSchema from './components/DatabaseSchema';
+import Backtesting from './components/Backtesting';
+import TelegramBot from './components/TelegramBot';
+import LLMIntegration from './components/LLMIntegration';
 
 // Sidebar Component
 function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) {
@@ -10,8 +13,11 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
     { id: 'overview', label: 'Tổng quan', icon: '🏢' },
     { id: 'departments', label: 'Phòng ban', icon: '📋' },
     { id: 'paper-trading', label: 'Paper Trading', icon: '📈' },
+    { id: 'backtesting', label: 'Backtesting', icon: '📊' },
     { id: 'code', label: 'Code Python', icon: '🐍' },
     { id: 'database', label: 'Database', icon: '🗄️' },
+    { id: 'llm', label: 'LLM Integration', icon: '🤖' },
+    { id: 'telegram', label: 'Telegram Bot', icon: '📱' },
     { id: 'workflow', label: 'Luồng vận hành', icon: '🔄' },
     { id: 'constitution', label: 'Hiến pháp', icon: '📜' },
     { id: 'costs', label: 'Chi phí & Token', icon: '💰' },
@@ -699,8 +705,11 @@ export default function App() {
       case 'overview': return <Overview />;
       case 'departments': return <Departments />;
       case 'paper-trading': return <PaperTrading />;
+      case 'backtesting': return <Backtesting />;
       case 'code': return <CodeSamples />;
       case 'database': return <DatabaseSchema />;
+      case 'llm': return <LLMIntegration />;
+      case 'telegram': return <TelegramBot />;
       case 'workflow': return <Workflow />;
       case 'constitution': return <Constitution />;
       case 'costs': return <Costs />;
