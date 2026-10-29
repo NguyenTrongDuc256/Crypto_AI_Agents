@@ -6,6 +6,7 @@ import DatabaseSchema from './components/DatabaseSchema';
 import Backtesting from './components/Backtesting';
 import TelegramBot from './components/TelegramBot';
 import LLMIntegration from './components/LLMIntegration';
+import LLMCodeConnection from './components/LLMCodeConnection';
 
 // Sidebar Component
 function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) {
@@ -15,6 +16,7 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
     { id: 'paper-trading', label: 'Paper Trading', icon: '📈' },
     { id: 'backtesting', label: 'Backtesting', icon: '📊' },
     { id: 'code', label: 'Code Python', icon: '🐍' },
+    { id: 'llm-code', label: '🔌 LLM Code', icon: '🔌' },
     { id: 'database', label: 'Database', icon: '🗄️' },
     { id: 'llm', label: 'LLM Integration', icon: '🤖' },
     { id: 'telegram', label: 'Telegram Bot', icon: '📱' },
@@ -707,6 +709,7 @@ export default function App() {
       case 'paper-trading': return <PaperTrading />;
       case 'backtesting': return <Backtesting />;
       case 'code': return <CodeSamples />;
+      case 'llm-code': return <LLMCodeConnection />;
       case 'database': return <DatabaseSchema />;
       case 'llm': return <LLMIntegration />;
       case 'telegram': return <TelegramBot />;
