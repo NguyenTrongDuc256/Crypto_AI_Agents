@@ -1,11 +1,17 @@
 import { useState } from 'react';
 import { departments, constitution, workflow, costBreakdown, responsibilityMatrix, Department } from './data/departments';
+import PaperTrading from './components/PaperTrading';
+import CodeSamples from './components/CodeSamples';
+import DatabaseSchema from './components/DatabaseSchema';
 
 // Sidebar Component
 function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) {
   const tabs = [
     { id: 'overview', label: 'Tổng quan', icon: '🏢' },
     { id: 'departments', label: 'Phòng ban', icon: '📋' },
+    { id: 'paper-trading', label: 'Paper Trading', icon: '📈' },
+    { id: 'code', label: 'Code Python', icon: '🐍' },
+    { id: 'database', label: 'Database', icon: '🗄️' },
     { id: 'workflow', label: 'Luồng vận hành', icon: '🔄' },
     { id: 'constitution', label: 'Hiến pháp', icon: '📜' },
     { id: 'costs', label: 'Chi phí & Token', icon: '💰' },
@@ -692,6 +698,9 @@ export default function App() {
     switch (activeTab) {
       case 'overview': return <Overview />;
       case 'departments': return <Departments />;
+      case 'paper-trading': return <PaperTrading />;
+      case 'code': return <CodeSamples />;
+      case 'database': return <DatabaseSchema />;
       case 'workflow': return <Workflow />;
       case 'constitution': return <Constitution />;
       case 'costs': return <Costs />;
