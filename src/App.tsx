@@ -8,6 +8,7 @@ import TelegramBot from './components/TelegramBot';
 import LLMIntegration from './components/LLMIntegration';
 import LLMCodeConnection from './components/LLMCodeConnection';
 import AgentPrompts from './components/AgentPrompts';
+import Deployment from './components/Deployment';
 
 // Sidebar Component
 function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) {
@@ -19,6 +20,7 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
     { id: 'code', label: 'Code Python', icon: '🐍' },
     { id: 'llm-code', label: '🔌 LLM Code', icon: '🔌' },
     { id: 'prompts', label: '📝 Prompts', icon: '📝' },
+    { id: 'deployment', label: '🚀 Deploy', icon: '🚀' },
     { id: 'database', label: 'Database', icon: '🗄️' },
     { id: 'llm', label: 'LLM Integration', icon: '🤖' },
     { id: 'telegram', label: 'Telegram Bot', icon: '📱' },
@@ -713,6 +715,7 @@ export default function App() {
       case 'code': return <CodeSamples />;
       case 'llm-code': return <LLMCodeConnection />;
       case 'prompts': return <AgentPrompts />;
+      case 'deployment': return <Deployment />;
       case 'database': return <DatabaseSchema />;
       case 'llm': return <LLMIntegration />;
       case 'telegram': return <TelegramBot />;
