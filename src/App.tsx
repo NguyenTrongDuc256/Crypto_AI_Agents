@@ -9,6 +9,7 @@ import LLMIntegration from './components/LLMIntegration';
 import LLMCodeConnection from './components/LLMCodeConnection';
 import AgentPrompts from './components/AgentPrompts';
 import Deployment from './components/Deployment';
+import DeployVercel from './components/DeployVercel';
 
 // Sidebar Component
 function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) {
@@ -21,6 +22,7 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
     { id: 'llm-code', label: '🔌 LLM Code', icon: '🔌' },
     { id: 'prompts', label: '📝 Prompts', icon: '📝' },
     { id: 'deployment', label: '🚀 Deploy', icon: '🚀' },
+    { id: 'deploy-vercel', label: '🎯 Vercel Guide', icon: '🎯' },
     { id: 'database', label: 'Database', icon: '🗄️' },
     { id: 'llm', label: 'LLM Integration', icon: '🤖' },
     { id: 'telegram', label: 'Telegram Bot', icon: '📱' },
@@ -716,6 +718,7 @@ export default function App() {
       case 'llm-code': return <LLMCodeConnection />;
       case 'prompts': return <AgentPrompts />;
       case 'deployment': return <Deployment />;
+      case 'deploy-vercel': return <DeployVercel />;
       case 'database': return <DatabaseSchema />;
       case 'llm': return <LLMIntegration />;
       case 'telegram': return <TelegramBot />;
